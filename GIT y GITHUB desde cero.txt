@@ -1,0 +1,72 @@
+## Estados de los archivos en GIT
+- Modificado ()
+	Se encuentra en el área WORKING DIRECTORY
+- Preparado ()
+	Se encuentra en el área STAGING AREA
+- Confirmado ()
+	Se encuentra en el área LOCAL REPOSITORY - DIRECTORIO LOCAL DE GIT
+
+## Comnados CMD/BASH
+	- Crear carpetas, directorios y/o repositorios
+		mkdir [NOMBRE]
+		ó
+		mkdir [PATCH/NOMBRE]
+	
+	- Crear archivos en el directorio
+		touch [NOMBRE.EXT]
+			
+
+## Comandos GIT
+- Configurar nombre de usuario en git
+	gti config --global user.mail "evansladera@gmail.com"
+	gti config --global user.name "evans ladera"
+
+- Obtener nombre, mail de usuario en git configurado previamente
+	git config --global -e
+	ó
+	git config --global -l (preferible)
+
+- Obtenr la configuración inicial de GIT
+	git config --list
+
+- Cambio de Estados	
+	Desde Modificado (WORKING DIRECTORY) a Preparado (STAGING AREA)
+		git add (permite ingresar un archivo a la vez a la zona de states)
+			ej: git add [nombre.ext]
+		git add . (permite ingresar a la zona de states todos los archivos)
+			ej: git add .
+	
+	Desde Preparado (STAGING AREA) a Confirmado (LOCAL REPOSITORY)
+		git commit
+		git commit -m "comentario del commit"
+
+- Iniciar el proyecto
+	git init (Se genera una sola vez por cada proyecto)
+
+- Verificar el estado de los archivos para commint
+	git status
+	
+- Verificar las modificaciones realizadas sobre un archivo
+	git diff
+
+- Eliminar archivos 
+	git reset HEAD [nombre.ext]
+	git status
+
+- Deshacer cambios
+	git checkout .
+	
+- Visualizar historial de cambios (todos los cambios sobre el proyecto)
+	git log
+
+- Volver a versiones especificas
+	git log
+	Buscamos el codigo del commit (HEAD)
+	git checkout [HEAD (codigo del commit)]
+
+## Sincronizar repositorio Local con repositorio Remoto en GITHUB
+	git remote add origin [link_repositorio]
+	git push -u origin master
+	
+	
+	
